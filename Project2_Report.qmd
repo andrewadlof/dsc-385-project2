@@ -1,0 +1,213 @@
+---
+title: "DSC 385 - Project 2 Report"
+format: html
+---
+
+## Name and EID
+
+Please enter your name and EID here.
+
+### Setup
+
+Read in the data with `read_csv()` and store the data as an R object named `dataset`. Check the data to make sure all of the expected observations and variables are there.
+
+
+```{r}
+## Load the data and any necessary packages here.
+
+```
+
+## Part 1
+
+We will first consider the relationship between FEV1 and age. In general, it is expected that as children get older (and hence, larger in size), their FEV1 values should get higher. Verify this by fitting a linear regression model with FEV1 as the outcome and age as a predictor.
+
+How much does FEV1 change for a 1-year increase in the child's age? (Write your answer below the code block.)
+
+```{r}
+## Add your code here
+
+```
+
+
+
+
+## Part 2
+
+Make a scatterplot of FEV1 on the y-axis and age on the x-axis. Overlay the fitted regression line using the fitted model from Part 1.
+
+How would you characterize the fit of the regression line to the data? Is there anything unexpected in the plot?
+
+```{r}
+## Add your code here
+
+```
+
+
+
+
+## Part 3
+
+Make a scatterplot of the fitted values (x-axis) from the regression model and the residuals (y-axis). 
+
+1. Describe the pattern of the residuals in this plot.
+
+2. Recall the assumptions required for making inference from a linear model. Do any of those assumptions appear to be violated?
+
+
+```{r}
+## Add your code here
+
+```
+
+
+
+## Part 4
+
+In previous studies, males have tended to have higher FEV1 values than females. Fit a linear regression model with FEV1 as the outcome and gender as the predictor. Using the results of the model fit, answer the following questions:
+
+1. On average in this dataset, which gender has higher FEV1 values?
+
+2. On average in this dataset, what is the difference in FEV1 values between males and females?
+
+NOTE: For both of these questions, you are **not** being asked to make a statistical inference. 
+
+```{r}
+## Add your code here
+
+```
+
+
+
+## Part 5
+
+Now fit a linear regression model with FEV1 as the outcome and gender *and* age as predictors. Using the results of the model fit, answer the following questions:
+
+```{r}
+## Add your code here
+
+```
+
+
+1. On average in this dataset, which gender has higher FEV1 values when age is held constant?
+
+2. On average in this dataset, what is the difference in FEV1 values between males and females, when age is held constant?
+
+
+
+## Part 6
+
+We will now move to looking at the eNO variable. 
+
+1. Make a scatterplot of eNO (y-axis) and age (x-axis). Briefly describe the relationship between eNO and age.
+
+```{r}
+## Add your code here
+
+```
+
+
+2. Fit a linear model with eNO as the outcome nad age as the predictor variable. Overlay the fitted regression line on the scatterplot of eNO and age. How would you characterize the quality of the fit of this model? Do any of the linear regression model assumptions appear to be violated?
+
+
+```{r}
+## Add your code here
+
+```
+
+
+
+## Part 7
+
+
+Make a histogram of the standardized residuals for the fitted model of eNO and age. Use a few different `bin` choices in the `geom_histogram()` function to see how the histogram changes. How would you characterize the shape of the histogram here? Do any of the linear regression model assumptions appear to be violated?
+
+```{r}
+## Add your code here
+
+```
+
+
+## Part 8
+
+Create a new dataset that replaces eNO with the log of eNO (using the `log()` function). Store this new dataset in an object called `dataset2`.
+
+Using `dataset2`, fit a new linear regression model with the (now log-transformed) eNO variable as the response and age as the predictor.
+
+1. Make a plot of the residuals vs. fitted values for this new model (residuals on the y-axis, fitted values on the x-axis). 
+
+2. Also make a histogram of the standardized residuals from this new model.
+
+How would you characterize the fit of this model versus the fit of the previous model that did not use the log-transformed eNO variable? Which model is preferable, based on the diagnostic plots you have seen?
+
+```{r}
+## Add your code here
+
+```
+
+## Part 9
+
+Create a new dataset that takes the original `dataset` object and transforms the `mouse` variable by taking the log transformation of `mouse`. Store this new dataset in an R object named `dataset3`.
+
+For this part we will focus on the outcome `cough_days`. Based on what we know of allergic disease, children should only have a response to mouse allergen if they are in fact allergic to mouse allergen. Let's examine this hypothesis as follows:
+
+1. Create a new dataset called `dataset3yes` that contains only those individuals who have `mouse_allergic == "yes"`. Using `dataset3yes`, fit a linear model with `cough_days` as the outcome and `mouse` as the predictor.
+
+2. Create a new dataset called `dataset3no` that contains only those individuals who have `mouse_allergic == "yes"`. Using `dataset3no`, fit a linear model with `cough_days` as the outcome and `mouse` as the predictor.
+
+For each analysis, describe what is the relationship between mouse allergen and days with coughing or wheezing (`cough_days`). Interpret the coefficient for `mouse` in each of the models.
+
+```{r}
+## Add your code here
+
+```
+
+
+## Part 10
+
+Make a scatterplot of `cough_days` (y-axis) and `mouse` (x-axis), with a separate panel for those who are not mouse allergic and those who are mouse allergic (you can use `facet_wrap()` for this). In each plot, overlay the linear regression line fit using `geom_smooth(method = "lm")`.
+
+Are the relationships shown in the plots what you would have expected to see given what we know about allergic disease? 
+
+```{r}
+## Add your code here
+
+```
+
+
+## Part 11
+
+Using the `dataset3` object, fit a linear regression model with FEV1 as the outcome and age, gender, PM2.5, NO2, mouse allergen, and mouse allergic status as the predictors in the model. Compute 95% confidence intervals for each of the coefficients in the model.
+
+If we were going to collect data on a much larger sample of children, which of the three indoor pollutants---PM2.5, NO2, or mouse allergen---would most likely have a relationship similar to the one that we observe in this dataset?
+
+```{r}
+## Add your code here
+
+```
+
+## Part 12
+
+Make a scatterplot of the residuals versus the fitted values from this model. Describe what you see in the residuals and if there are any violations of the lienar regression model assumptions evident in the plot.
+
+```{r}
+## Add your code here
+
+```
+
+
+## Part 13
+
+Identify the observations with the two largest residuals in absolute value. How would you describe these two children and why do you think they have such large residuals from the model?
+
+
+```{r}
+## Add your code here
+
+```
+
+
+
+## Part 14
+
+Suppose you had the ability to improve the fit of the model by collecting data on a new variable. What data would you most like to collect to improve this model? Why?
+
