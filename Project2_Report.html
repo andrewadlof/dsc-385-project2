@@ -149,13 +149,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="part-5" class="level2">
 <h2 class="anchored" data-anchor-id="part-5">Part 5</h2>
 <p>Now fit a linear regression model with FEV1 as the outcome and gender <em>and</em> age as predictors. Using the results of the model fit, answer the following questions:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Add your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <ol type="1">
 <li><p>On average in this dataset, which gender has higher FEV1 values when age is held constant?</p></li>
 <li><p>On average in this dataset, what is the difference in FEV1 values between males and females, when age is held constant?</p></li>
 </ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Add your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="part-6" class="level2">
 <h2 class="anchored" data-anchor-id="part-6">Part 6</h2>
@@ -167,7 +167,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Add your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="2" type="1">
-<li>Fit a linear model with eNO as the outcome nad age as the predictor variable. Overlay the fitted regression line on the scatterplot of eNO and age. How would you characterize the quality of the fit of this model? Do any of the linear regression model assumptions appear to be violated?</li>
+<li>Fit a linear model with eNO as the outcome and age as the predictor variable. Overlay the fitted regression line on the scatterplot of eNO and age. How would you characterize the quality of the fit of this model? Do any of the linear regression model assumptions appear to be violated?</li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Add your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -198,8 +198,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Create a new dataset that takes the original <code>dataset</code> object and transforms the <code>mouse</code> variable by taking the log transformation of <code>mouse</code>. Store this new dataset in an R object named <code>dataset3</code>.</p>
 <p>For this part we will focus on the outcome <code>cough_days</code>. Based on what we know of allergic disease, children should only have a response to mouse allergen if they are in fact allergic to mouse allergen. Let’s examine this hypothesis as follows:</p>
 <ol type="1">
-<li><p>Create a new dataset called <code>dataset3yes</code> that contains only those individuals who have <code>mouse_allergic == "yes"</code>. Using <code>dataset3yes</code>, fit a linear model with <code>cough_days</code> as the outcome and <code>mouse</code> as the predictor.</p></li>
-<li><p>Create a new dataset called <code>dataset3no</code> that contains only those individuals who have <code>mouse_allergic == "yes"</code>. Using <code>dataset3no</code>, fit a linear model with <code>cough_days</code> as the outcome and <code>mouse</code> as the predictor.</p></li>
+<li><p>Create a new dataset called <code>dataset3yes</code> that contains only those individuals in <code>dataset3</code> who have <code>mouse_allergic == "yes"</code>. Using <code>dataset3yes</code>, fit a linear model with <code>cough_days</code> as the outcome and <code>mouse</code> as the predictor.</p></li>
+<li><p>Create a new dataset called <code>dataset3no</code> that contains only those individuals in <code>dataset3</code> who have <code>mouse_allergic == "yes"</code>. Using <code>dataset3no</code>, fit a linear model with <code>cough_days</code> as the outcome and <code>mouse</code> as the predictor.</p></li>
 </ol>
 <p>For each analysis, describe what is the relationship between mouse allergen and days with coughing or wheezing (<code>cough_days</code>). Interpret the coefficient for <code>mouse</code> in each of the models.</p>
 <div class="cell">
@@ -208,7 +208,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="part-10" class="level2">
 <h2 class="anchored" data-anchor-id="part-10">Part 10</h2>
-<p>Make a scatterplot of <code>cough_days</code> (y-axis) and <code>mouse</code> (x-axis), with a separate panel for those who are not mouse allergic and those who are mouse allergic (you can use <code>facet_wrap()</code> for this). In each plot, overlay the linear regression line fit using <code>geom_smooth(method = "lm")</code>.</p>
+<p>Make a scatterplot of <code>cough_days</code> (y-axis) and <code>mouse</code> (x-axis), with a separate panel for those who are not mouse allergic and those who are mouse allergic (you can use <code>facet_wrap()</code> for this) using <code>dataset3</code>. In each plot, overlay the linear regression line fit using <code>geom_smooth(method = "lm")</code>.</p>
 <p>Are the relationships shown in the plots what you would have expected to see given what we know about allergic disease?</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Add your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -224,7 +224,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="part-12" class="level2">
 <h2 class="anchored" data-anchor-id="part-12">Part 12</h2>
-<p>Make a scatterplot of the residuals versus the fitted values from this model. Describe what you see in the residuals and if there are any violations of the lienar regression model assumptions evident in the plot.</p>
+<p>Make a scatterplot of the residuals versus the fitted values from this model. Describe what you see in the residuals and if there are any violations of the linear regression model assumptions evident in the plot.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Add your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>

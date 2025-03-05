@@ -82,15 +82,15 @@ NOTE: For both of these questions, you are **not** being asked to make a statist
 
 Now fit a linear regression model with FEV1 as the outcome and gender *and* age as predictors. Using the results of the model fit, answer the following questions:
 
-```{r}
-## Add your code here
-
-```
-
 
 1. On average in this dataset, which gender has higher FEV1 values when age is held constant?
 
 2. On average in this dataset, what is the difference in FEV1 values between males and females, when age is held constant?
+
+```{r}
+## Add your code here
+
+```
 
 
 
@@ -106,7 +106,7 @@ We will now move to looking at the eNO variable.
 ```
 
 
-2. Fit a linear model with eNO as the outcome nad age as the predictor variable. Overlay the fitted regression line on the scatterplot of eNO and age. How would you characterize the quality of the fit of this model? Do any of the linear regression model assumptions appear to be violated?
+2. Fit a linear model with eNO as the outcome and age as the predictor variable. Overlay the fitted regression line on the scatterplot of eNO and age. How would you characterize the quality of the fit of this model? Do any of the linear regression model assumptions appear to be violated?
 
 
 ```{r}
@@ -150,9 +150,9 @@ Create a new dataset that takes the original `dataset` object and transforms the
 
 For this part we will focus on the outcome `cough_days`. Based on what we know of allergic disease, children should only have a response to mouse allergen if they are in fact allergic to mouse allergen. Let's examine this hypothesis as follows:
 
-1. Create a new dataset called `dataset3yes` that contains only those individuals who have `mouse_allergic == "yes"`. Using `dataset3yes`, fit a linear model with `cough_days` as the outcome and `mouse` as the predictor.
+1. Create a new dataset called `dataset3yes` that contains only those individuals in `dataset3` who have `mouse_allergic == "yes"`. Using `dataset3yes`, fit a linear model with `cough_days` as the outcome and `mouse` as the predictor.
 
-2. Create a new dataset called `dataset3no` that contains only those individuals who have `mouse_allergic == "yes"`. Using `dataset3no`, fit a linear model with `cough_days` as the outcome and `mouse` as the predictor.
+2. Create a new dataset called `dataset3no` that contains only those individuals in `dataset3` who have `mouse_allergic == "yes"`. Using `dataset3no`, fit a linear model with `cough_days` as the outcome and `mouse` as the predictor.
 
 For each analysis, describe what is the relationship between mouse allergen and days with coughing or wheezing (`cough_days`). Interpret the coefficient for `mouse` in each of the models.
 
@@ -164,7 +164,7 @@ For each analysis, describe what is the relationship between mouse allergen and 
 
 ## Part 10
 
-Make a scatterplot of `cough_days` (y-axis) and `mouse` (x-axis), with a separate panel for those who are not mouse allergic and those who are mouse allergic (you can use `facet_wrap()` for this). In each plot, overlay the linear regression line fit using `geom_smooth(method = "lm")`.
+Make a scatterplot of `cough_days` (y-axis) and `mouse` (x-axis), with a separate panel for those who are not mouse allergic and those who are mouse allergic (you can use `facet_wrap()` for this) using `dataset3`. In each plot, overlay the linear regression line fit using `geom_smooth(method = "lm")`.
 
 Are the relationships shown in the plots what you would have expected to see given what we know about allergic disease? 
 
@@ -187,7 +187,7 @@ If we were going to collect data on a much larger sample of children, which of t
 
 ## Part 12
 
-Make a scatterplot of the residuals versus the fitted values from this model. Describe what you see in the residuals and if there are any violations of the lienar regression model assumptions evident in the plot.
+Make a scatterplot of the residuals versus the fitted values from this model. Describe what you see in the residuals and if there are any violations of the linear regression model assumptions evident in the plot.
 
 ```{r}
 ## Add your code here
