@@ -152,7 +152,7 @@ For this part we will focus on the outcome `cough_days`. Based on what we know o
 
 1. Create a new dataset called `dataset3yes` that contains only those individuals in `dataset3` who have `mouse_allergic == "yes"`. Using `dataset3yes`, fit a linear model with `cough_days` as the outcome and `mouse` as the predictor.
 
-2. Create a new dataset called `dataset3no` that contains only those individuals in `dataset3` who have `mouse_allergic == "yes"`. Using `dataset3no`, fit a linear model with `cough_days` as the outcome and `mouse` as the predictor.
+2. Create a new dataset called `dataset3no` that contains only those individuals in `dataset3` who have `mouse_allergic == "no"`. Using `dataset3no`, fit a linear model with `cough_days` as the outcome and `mouse` as the predictor.
 
 For each analysis, describe what is the relationship between mouse allergen and days with coughing or wheezing (`cough_days`). Interpret the coefficient for `mouse` in each of the models.
 
