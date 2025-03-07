@@ -63,7 +63,7 @@ Make a scatterplot of the fitted values (x-axis) from the regression model and t
 
 ## Part 4
 
-In previous studies, males have tended to have higher FEV1 values than females. Fit a linear regression model with FEV1 as the outcome and gender as the predictor. Using the results of the model fit, answer the following questions:
+In previous studies, males have tended to have higher FEV1 values than females. Fit a linear regression model with FEV1 as the outcome and gender as the predictor. **Using the results of the model fit**, answer the following questions:
 
 1. On average in this dataset, which gender has higher FEV1 values?
 
