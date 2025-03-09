@@ -1,0 +1,326 @@
+/*-- scss:defaults --*/
+//
+// Color system
+//
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #ecf0f1 !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #b4bcc2 !default;
+$gray-600: #95a5a6 !default;
+$gray-700: #7b8a8b !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$blue:    #2c3e50 !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #e74c3c !default;
+$orange:  #8B4000 !default;
+$yellow:  #f39c12 !default;
+$green:   #18bc9c !default;
+$teal:    #20c997 !default;
+$cyan:    #3498db !default;
+
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-200 !default;
+$dark:          $gray-800 !default;
+
+$min-contrast-ratio:   2.05 !default;
+
+// Body
+body {
+    background-image: url("https://raw.githubusercontent.com/drewadlof/images-and-icons/main/university_of_texas/ut_tower_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+$theme: "flatly" !default;
+
+// Links
+$link-color: $orange !default;
+
+// Code blocks
+$code-block-bg: rgb(255, 255, 255) !default;
+$code-block-bg-alpha: 0.3;
+
+// Inline Code
+$code-bg: $white !default;
+
+// Code Copy
+$btn-code-copy-color: $white !default;
+
+// Font settings
+$font-family-sans-serif: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$h1-font-size: 3rem !default;
+$h2-font-size: 2.5rem !default;
+$h3-font-size: 2rem !default;
+
+// Tables
+$table-bg-scale: 0 !default;
+
+// Dropdowns
+$dropdown-link-color: $gray-700 !default;
+$dropdown-link-hover-color: $white !default;
+$dropdown-link-hover-bg: $primary !default;
+
+// Navs
+$nav-link-padding-y: .5rem !default;
+$nav-link-padding-x: 2rem !default;
+$nav-link-disabled-color: $gray-600 !default;
+$nav-tabs-border-color: $gray-200 !default;
+
+// Navbar
+$navbar-padding-y: 1rem !default;
+$navbar-light-bg: $primary !default;
+$navbar-light-color: $white !default;
+$navbar-light-hover-color: $success !default;
+$navbar-light-active-color: $success !default;
+$navbar-light-brand-color: $white !default;
+$navbar-light-brand-hover-color: $navbar-light-brand-color !default;
+
+$navbar-dark-color: $white !default;
+$navbar-dark-hover-color: $primary !default;
+$navbar-dark-active-color: $primary !default;
+$navbar-dark-brand-color: $white !default;
+$navbar-dark-brand-hover-color: $navbar-dark-brand-color !default;
+
+// Pagination
+$pagination-color: $white !default;
+$pagination-bg: $success !default;
+$pagination-border-width: 0 !default;
+$pagination-border-color: transparent !default;
+$pagination-hover-color: $white !default;
+$pagination-hover-bg: darken($success, 15%) !default;
+$pagination-hover-border-color: transparent !default;
+$pagination-active-bg: $pagination-hover-bg !default;
+$pagination-active-border-color: transparent !default;
+$pagination-disabled-color: $gray-200 !default;
+$pagination-disabled-bg: lighten($success, 15%) !default;
+$pagination-disabled-border-color: transparent !default;
+
+// List group
+$list-group-hover-bg: $gray-200 !default;
+$list-group-disabled-bg: $gray-200 !default;
+
+// Breadcrumbs
+$breadcrumb-padding-y: .375rem !default;
+$breadcrumb-padding-x: .75rem !default;
+$breadcrumb-border-radius: .25rem !default;
+
+// Close
+$btn-close-color: $white !default;
+$btn-close-opacity: .4 !default;
+$btn-close-hover-opacity: 1 !default;
+
+/*-- scss:rules --*/
+
+// Web Fonts
+$web-font-path: "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" !default;
+@if $web-font-path {
+  @import url($web-font-path);
+}
+
+:root {
+  color-scheme: light;
+}
+
+// Main content area styling for better readability
+main {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 8px;
+  color: $black;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $black;
+  }
+
+  a {
+    color: lighten($orange, 15%);
+    &:hover {
+      color: lighten($orange, 25%);
+    }
+  }
+
+  p {
+    color: $black;
+    line-height: 1.6;
+  }
+}
+
+// Navbar
+.bg-primary {
+  .navbar-nav .show > .nav-link,
+  .navbar-nav .nav-link.active,
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link:focus {
+    color: $success !important;
+  }
+}
+
+// Navs
+.nav-tabs {
+  .nav-link.active,
+  .nav-link.active:focus,
+  .nav-link.active:hover,
+  .nav-item.open .nav-link,
+  .nav-item.open .nav-link:focus,
+  .nav-item.open .nav-link:hover {
+    color: $white;
+  }
+}
+
+// Pagination
+.pagination {
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+// Indicators
+.badge {
+  &.bg-light {
+    color: $dark;
+  }
+}
+
+// Alerts
+.alert {
+  color: $white;
+  border: none;
+
+  a,
+  .alert-link {
+    color: $white;
+    text-decoration: underline;
+  }
+}
+
+// TOC and Sidebar
+.toc {
+  background: none !important;
+}
+
+.sidebar {
+  nav[role="doc-toc"] {
+    ul > li > a.active {
+      background: none !important;
+      color: $orange !important;
+      font-weight: bold;
+    }
+  }
+}
+
+// Tables
+table {
+  background-color: rgba(255, 255, 255, 0.5);
+
+  th, td {
+    color: $white;
+    border-color: rgba($white, 0.2);
+  }
+
+  thead {
+    background-color: rgba($orange, 0.5);
+  }
+}
+
+// Blockquotes
+blockquote {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-left: 4px solid $orange;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+// Code blocks
+// Specific styles for line numbers
+.sourceCode {
+  .line-numbers {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    color: #2c3333 !important;
+  }
+}
+
+// Ensure code blocks respect the theme
+div.sourceCode {
+  background-color: rgba(240, 240, 240, 0.4) !important;
+}
+
+pre.sourceCode {
+  background-color: rgba(240, 240, 240, 0.4) !important;
+}
+
+// Inline code
+code {
+  color: lighten($orange, 15%) !important;
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+// Code-tools modal styling for dark theme
+.modal {
+  .modal-content {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+  }
+
+  .modal-header {
+    background-color: #2d2d2d !important;
+    border-bottom: 1px solid #404040 !important;
+
+    .modal-title {
+      color: #ffffff !important;
+    }
+
+    .btn-close {
+      color: #ffffff !important;
+      filter: invert(1) grayscale(100%) brightness(200%);
+    }
+  }
+
+  .modal-body {
+    pre {
+      background-color: #2d2d2d !important;
+      color: #ffffff !important;
+    }
+    .sourceCode {
+      background-color: #2d2d2d !important;
+      color: #ffffff !important;
+        .line-numbers {
+        background-color: #2d2d2d !important;
+        color: #808080 !important;
+      }
+    }
+
+    // Style the copy button
+    .code-copy-button {
+      color: $orange !important;
+      opacity: 0.8 !important;
+
+      &:hover {
+        opacity: 1 !important;
+        color: lighten($orange, 10%) !important;
+      }
+    }
+  }
+
+  .modal-footer {
+    background-color: #2d2d2d !important;
+    border-top: 1px solid #404040 !important;
+  }
+}
