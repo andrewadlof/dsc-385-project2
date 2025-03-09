@@ -84,7 +84,6 @@ The first few rows of the dataset are shown below.
 | f401998a | 15.5 | male | 3.49 | 26 | 4 | 39.9 | 32.9 | 264 | no |
 | 357fdacb | 12.7 | female | 2.29 | 17 | 1 | 27.1 | 25.7 | 419 | no |
 | 2a722e16 | 16.0 | male | 2.37 | 134 | 14 | 64.6 | 18.0 | 187 | yes |
-# i 140 more rows
 
 ## The Report
 
