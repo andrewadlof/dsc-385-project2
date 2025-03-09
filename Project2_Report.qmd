@@ -71,8 +71,12 @@ editor: visual
 Read in the data with `read_csv()` and store the data as an R object named `dataset`. Check the data to make sure all of the expected observations and variables are there.
 
 
-```{r}
-## Load the data and any necessary packages here.
+```{r load-data-and-packages}
+## Load packages
+
+
+## Load data 
+
 
 ```
 
