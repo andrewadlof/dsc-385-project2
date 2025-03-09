@@ -1,11 +1,70 @@
 ---
 title: "DSC 385 - Project 2 Report"
-format: html
+title-block-banner: Transparent
+title-block-banner-color: white
+date: today
+lightbox:
+  match: auto
+  effect: zoom
+  desc-position: bottom
+  loop: true
+format:
+  html:
+    code-copy: hover
+    code-fold: false
+    code-line-numbers: true
+    code-overflow: wrap
+    code-summary: "Show Code"
+    code-tools:
+          source: true
+          toggle: true
+          caption: none
+    embed-resources: true
+    grid:
+      sidebar-width: 200px
+      body-width: 1025px
+      margin-width: 275px
+      gutter-width: 1.5rem
+    highlight-style: ut_austin.theme
+    mainfont: Arial
+    monofont: JetBrainsMono Nerd Font
+    sansfont: Arial
+    self-contained-math: true
+    smooth-scroll: true
+    theme: styles.scss
+    toc: true
+    toc-depth: 3
+    toc-expand: 2
+    toc-title: " "
+    toc_float: true
+  pdf:
+    colorlinks: true
+    highlight-style: ut_austin.theme
+    mainfont: Arial
+    monofont: JetBrainsMono Nerd Font
+    number-sections: false
+    sansfont: Arial
+    toc: true
+  ipynb: default
+format-links:
+  - html
+  - format: ipynb
+    text: iPython Notebook
+    icon: journal-code
+  - format: pdf
+    text: PDF
+    icon: file-earmark-pdf
+execute:
+  cache: true
+  keep-md: false
+  freeze: auto
+editor: visual
 ---
 
 ## Name and EID
 
-Please enter your name and EID here.
+> Name: Andrew Adlof
+> EID: aka752
 
 ### Setup
 
