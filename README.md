@@ -1,6 +1,3 @@
-# Project2
-Project 2
-
 # DSC 385 - Project 2 Linear Regression
 
 # Modeling
